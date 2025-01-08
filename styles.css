@@ -39,5 +39,89 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
 }
+
+.front, .desc, .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front {
+    margin-bottom: 2vh;
+    font-weight: 600;
+}
+
+.name {
+    margin-bottom: 2vh;
+
+}
+
+
+.anim {
+    margin-left: 5px;
+    color: white; /* Początkowy kolor tekstu */
+    animation: changeColor 3s infinite; /* Animacja zmiany koloru */
+
+}
+
+@keyframes changeColor {
+    0% {
+      color: white; /* Na początku tekst jest biały */
+    }
+    50% {
+      color: grey; /* W połowie animacji tekst staje się szary */
+    }
+    100% {
+      color: white; /* Na końcu animacji tekst wraca do białego */
+    }
+
+}
+
+.desc {
+    margin: 2vh;
+    font-size: 1.5vh;
+}
+  
+
+.front {
+    white-space: nowrap; /* Umożliwia animację na jednej linii */
+    overflow: hidden; /* Ukrywa nadmiar tekstu, który nie jest jeszcze widoczny */
+    width: 0; /* Rozpoczyna animację z zerową szerokością */
+    animation: typing 4s steps(240) 1s forwards, blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    0% {
+      width: 0; /* Na początku tekstu nie widać */
+    }
+    100% {
+      width: 100%; /* Na końcu ujawnia się cały tekst */
+    }
+  }
+  
+
+
+.logos {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 4vh;
+    margin-left: 8.5vh;
+
+    
+}
+
+.logos a {
+    margin-right: 3vh; /* Zwiększa odstęp między ikonami */
+  }
+  
+  .logos a:last-child {
+    margin-right: 0; /* Usuwa margines po ostatniej ikonie */
+  }
+
+  a {
+    text-decoration: none;
+    color: hsl(0, 0%, 65%);
+ }
